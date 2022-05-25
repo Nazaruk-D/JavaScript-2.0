@@ -138,8 +138,10 @@ y.style.border = '2px solid red';
 // Task 16.
 // Создайте два input type=number, куда пользователь может ввести числа. Выведите на страницу сумму данных чисел по нажатию кнопки b-16
 
-function t16() {
-
+t16 = function () {
+    document.querySelector('.out-16').textContent = +document.querySelector('.i-16-1').value + +document.querySelector('.i-16-2').value; 
+    document.querySelector('.i-16-1').value = '';
+    document.querySelector('.i-16-2').value = '';
 }
 
 document.querySelector('.b-16').onclick = t16;
@@ -147,8 +149,11 @@ document.querySelector('.b-16').onclick = t16;
 // Task 17.
 // Создайте input type="text" куда пользователь может ввести строку и число. Создайте функцию, которая запускается по нажатию на кнопку. Получите значение из input в переменную t. А затем сделайте операцию t = parseInt(t), и результат операции выведите в out-17. Прочитайте за эту операцию. Попробуйте по очереди вводить 44, 44aaa, 44.3, a45 . Изучите вывод.
 
-function t17() {
-
+t17 = function () {
+let t;
+t = document.querySelector('.i-17').value;
+t = parseInt(t);
+document.querySelector('.out-17').textContent = t;
 
 }
 
@@ -157,8 +162,10 @@ document.querySelector('.b-17').onclick = t17;
 // Task 18.
 // Создайте input type="text" куда пользователь может ввести строку и число. Создайте функцию, которая запускается по нажатию на кнопку. Получите значение из input в переменную t. А затем сделайте операцию t = parseFloat(t), и результат операции выведите в консоль. Прочитайте за эту операцию. Попробуйте по очереди вводить 44, 44aaa, 44.3, a45 . Изучите вывод.
 
-function t18() {
-
+t18 = function () {
+    t = document.querySelector('.i-18').value;
+    t = parseFloat(t);
+    console.log(t);
 }
 
 document.querySelector('.b-18').onclick = t18;
@@ -166,8 +173,10 @@ document.querySelector('.b-18').onclick = t18;
 // Task 19.
 // Создайте два input type=number, куда пользователь может ввести отрицательные числа. Выведите на страницу сумму данных чисел. Мы это делали! Зачем? Затем, что нужно понимать как влияет перевод в число с помощью + и parseInt на отрицательные числа!!!
 
-function t19() {
-
+t19 = function () {
+    document.querySelector('.out-19').textContent = +document.querySelector('.i-19-1').value + +document.querySelector('.i-19-2').value; 
+    document.querySelector('.i-19-1').value = '';
+    document.querySelector('.i-19-2').value = '';
 }
 
 document.querySelector('.b-19').onclick = t19;
@@ -175,8 +184,8 @@ document.querySelector('.b-19').onclick = t19;
 // Task 20
 // Создайте опросник, куда пользователь может ввести имя, фамилию, возраст, род занятий. И кнопку. По нажатию кнопки выведите на страницу предложение 'Уважаемый Иван, Иванов, ваш возраст 33 года, по професси вы ...' куда поставьте соответствующие данные из inputов.
 
-function t20() {
-
+t20 = function () {
+    document.querySelector('.out-20').textContent = 'Уважаемый ' + document.querySelector('.i-20-1').value + ' ' + document.querySelector('.i-20-2').value + ', ваш возраст ' + document.querySelector('.i-20-3').value + ' лет, по профессии вы ' + document.querySelector('.i-20-4').value;
 }
 
 document.querySelector('.b-20').onclick = t20;
