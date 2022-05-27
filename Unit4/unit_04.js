@@ -66,7 +66,9 @@ document.querySelector('.b-5').onclick = f5;
 //Создайте input(hidden).i-6 и button.b-6 - при нажатии на кнопку выводите value из input в div.out-6
 
 function f6() {
-
+    let inp = document.querySelector('.i-6');
+    let out = document.querySelector('.out-6');
+    out.innerHTML = inp.value; 
 }
 
 document.querySelector('.b-6').onclick = f6;
@@ -75,6 +77,16 @@ document.querySelector('.b-6').onclick = f6;
 // Создайте input(password).i-7 и button.b-7 - при нажатии на кнопку выводите в div.out-71 value прописанное в input. В .out-72 выводите 1 если длина пароля больше или равна 6 или 0 если меньше. Для подсчета количества символов в строке используйте length.
 
 function f7() {
+    let inp = document.querySelector('.i-7');
+    let out71 = document.querySelector('.out-71');
+    let out72= document.querySelector('.out-72');
+    out71.innerHTML = inp.value;
+    if (inp.value >= 6) {
+        out72.innerHTML = 1;
+    }
+    else {
+        out72.innerHTML = 0;
+    }
 
 }
 
@@ -84,18 +96,21 @@ document.querySelector('.b-7').onclick = f7;
 // Создайте div.out-8 и кнопку .b-8. При нажатии кнопки создавайте внутри div.out-8 элемент input.i-81 и кнопку .b-81 (innerHTML). Добавьте на созданную кнопку событие клик и запуск функции f81. Функция должна в .out-81 выводить value созданного input.i-81.
 
 function f8() {
-    // кнопку создаем через ....innerHTML = '<button....</button>
-    // т.е. как строку и в ставляем на страницу
-    //  потом получаем кнопку со страницы и вешаем событие
-    //    вашасозданнаякнопка.onclick = f81;
-    //
+    let out = document.querySelector('div.out-8');
+    out.innerHTML = '<div class="form-control">Input i-81 <input type="text" class="i-81"></div><button class="b-81 button-primary">Кнопка</button>';
+
+
+    function f81 () {
+        let out2 = document.querySelector('div.out-81');
+        let inp = document.querySelector('.i-81');
+        out2.innerHTML = inp.value; 
+        
+    }
+    document.querySelector('.b-81').onclick = f81;
 }
-
-function f81 () {
-
-}
-
 document.querySelector('.b-8').onclick = f8;
+
+
 
 // Task 9
 //Создайте один input(radio).r-9  и button.b-9 - при нажатии на button если radio.r-9 выбран (активен, checked) выводите в .out-9 - value прописанное в r-9, либо 0 если не активен. 
@@ -214,3 +229,30 @@ function f20(e) {
 }
 
 document.querySelector('.b-20').onclick = f20;
+
+
+
+
+
+
+// function f8() {
+//     // кнопку создаем через ....innerHTML = '<button....</button>
+//     // т.е. как строку и в ставляем на страницу
+//     //  потом получаем кнопку со страницы и вешаем событие
+//     //    вашасозданнаякнопка.onclick = f81;
+//     //
+//     let out = document.querySelector('div.out-8');
+//     out.innerHTML = '<div class="form-control">Input i-81 <input type="text" class="i-81"></div><button class="button-primary b-81">Кнопка</button>';
+// }
+
+
+// document.querySelector('.b-81').onclick = function f81 () {
+//     let out = document.querySelector('div.out-81');
+//     let inp = document.querySelector('div.i-81');
+//     console.log(inp);
+//     out.innerHTML = inp.value;
+    
+// }
+
+// document.querySelector('.b-8').onclick = f8;
+// document.querySelector('.b-81').onclick = f81;
