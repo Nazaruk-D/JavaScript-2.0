@@ -3,7 +3,7 @@
 
 f1 = function f1 (){
     let num = document.querySelector('.i-1').value;
-    if (num == 7) {
+    if (num == 4) {
         document.querySelector('.out-1').textContent = 'true';
     }
     else {
