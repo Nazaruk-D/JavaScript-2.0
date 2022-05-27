@@ -204,7 +204,10 @@ document.querySelector('.b-15').onclick = f15;
 
 function f16() {
     // для получения выбранного option просто получите select в переменную и select.value;
-
+    let select = document.querySelector('.s-16');
+    let out = document.querySelector('.out-16');
+    out.innerHTML = select.value;
+    
 }
 
 document.querySelector('.b-16').onclick = f16;
@@ -213,7 +216,9 @@ document.querySelector('.b-16').onclick = f16;
 // Создайте select.s-17. Добавьте ему событие onchange, при наступлении которого запускается функция f17. Функция должна выводить в out-17 value выбранного в select option.
 
 function f17() {
-
+    let select = document.querySelector('.s-17');
+    let out = document.querySelector('.out-17');
+    out.innerHTML = select.value;
 }
 
 document.querySelector('.s-17').onchange = f17;
@@ -222,7 +227,9 @@ document.querySelector('.s-17').onchange = f17;
 // Создайте select.s-18 и input.i-18. Добавьте на select событие onchange, при наступлении которого запускается функция f18. Функция должна выводить в input i-18 value выбранного в select option.
 
 function f18() {
-
+    let select = document.querySelector('.s-18');
+    let out = document.querySelector('.i-18');
+    out.value = select.value;
 }
 
 document.querySelector('.s-18').onchange = f18;
@@ -231,7 +238,10 @@ document.querySelector('.s-18').onchange = f18;
 // Создайте форму. В ней input(text).i-191 и input(password).i-192 - и кнопку button.b-19. По нажатию кнопки выводите значение text и password в out-19 через пробел. Обратите внимание на хитрость. Мы, кнопку сейчас повесили за пределами формы. Чуть позже мы рассмотрим почему это делали.
 
 function f19() {
-
+    let inp = document.querySelector('.i-191');
+    let inp2 = document.querySelector('.i-192');
+    let out = document.querySelector('.out-19');
+    out.innerHTML = inp.value + ' ' + inp2.value;
 }
 
 document.querySelector('.b-19').onclick = f19;
@@ -245,8 +255,11 @@ document.querySelector('.b-19').onclick = f19;
 function f20(e) {
     e.preventDefault(); // чтобы форма не перезагружала страницу!!!!
     let form = document.querySelector('.f-20');
-    console.log(form.elements);
-    console.log(form.elements['username'].value); // так можно обратиться к элементу внутри формы
+    out = document.querySelector('.out-20');
+    out.innerHTML = form.elements['password'].value + ' ' + form.elements['username'].value;
+
+    // console.log(form.elements['password'].value);
+    // console.log(form.elements['username'].value); // так можно обратиться к элементу внутри формы
 
 }
 
@@ -256,25 +269,3 @@ document.querySelector('.b-20').onclick = f20;
 
 
 
-
-// function f8() {
-//     // кнопку создаем через ....innerHTML = '<button....</button>
-//     // т.е. как строку и в ставляем на страницу
-//     //  потом получаем кнопку со страницы и вешаем событие
-//     //    вашасозданнаякнопка.onclick = f81;
-//     //
-//     let out = document.querySelector('div.out-8');
-//     out.innerHTML = '<div class="form-control">Input i-81 <input type="text" class="i-81"></div><button class="button-primary b-81">Кнопка</button>';
-// }
-
-
-// document.querySelector('.b-81').onclick = function f81 () {
-//     let out = document.querySelector('div.out-81');
-//     let inp = document.querySelector('div.i-81');
-//     console.log(inp);
-//     out.innerHTML = inp.value;
-    
-// }
-
-// document.querySelector('.b-8').onclick = f8;
-// document.querySelector('.b-81').onclick = f81;
