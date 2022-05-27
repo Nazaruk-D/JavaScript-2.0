@@ -9,9 +9,11 @@ f1 = function f1 (){
     else {
         document.querySelector('.out-1').textContent = 'false';
     }
-}
+} 
 
 document.querySelector('.b-1').onclick = f1;
+
+// 11
 
 
 // Task 2
