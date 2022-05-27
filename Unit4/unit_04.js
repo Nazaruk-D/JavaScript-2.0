@@ -116,7 +116,14 @@ document.querySelector('.b-8').onclick = f8;
 //Создайте один input(radio).r-9  и button.b-9 - при нажатии на button если radio.r-9 выбран (активен, checked) выводите в .out-9 - value прописанное в r-9, либо 0 если не активен. 
 
 function f9() {
-
+    let myRadioBox = document.querySelector('.r-9');
+    let out = document.querySelector('.out-9');
+    if (myRadioBox.checked) {
+        out.innerHTML = document.querySelector('.r-9').value;
+    }
+    else {
+        out.innerHTML = 0;
+    }
 }
 
 document.querySelector('.b-9').onclick = f9;
@@ -126,7 +133,9 @@ document.querySelector('.b-9').onclick = f9;
 
 
 function f10() {
-
+    let inp = document.querySelector('.i-10');
+    let out = document.querySelector('.out-10');
+    out.style.background = inp.value;
 }
 
 document.querySelector('.b-10').onclick = f10;
@@ -136,7 +145,9 @@ document.querySelector('.b-10').onclick = f10;
 //   Создайте input(color).i-111 и input(color).i-112- два элемента и button.b-11 - при нажатии на кнопку присвойте цвет из первого input в value второго.
 
 function f11() {
-
+    let inp = document.querySelector('.i-111');
+    let out = document.querySelector('.i-112');
+    out.value = inp.value;
 }
 
 document.querySelector('.b-11').onclick = f11;
@@ -145,7 +156,9 @@ document.querySelector('.b-11').onclick = f11;
 //   Создайте input(date).i-12 и button.b-12 - при нажатии на кнопку выводите на в  out-12 выбранную в input дату.
 
 function f12() {
-
+    let inp = document.querySelector('.i-12');
+    let out = document.querySelector('.out-12');
+    out.innerHTML = inp.value;
 }
 
 document.querySelector('.b-12').onclick = f12;
@@ -154,7 +167,9 @@ document.querySelector('.b-12').onclick = f12;
 //  Создайте input(range).i-13. При изменении положения ползунка i-13 выводите значение в out-13. Для события используйте oninput.
 
 function f13() {
-
+    let inp = document.querySelector('.i-13');
+    let out = document.querySelector('.out-13');
+    out.innerHTML = inp.value;
 }
 
 document.querySelector('.i-13').oninput = f13;
@@ -163,7 +178,9 @@ document.querySelector('.i-13').oninput = f13;
 // Создайте text-area.t-14 и button.b-14 - при нажатии на кнопку выводите на в out-14 текст введенный в t-14.
 
 function f14() {
-
+    let inp = document.querySelector('.t-14');
+    let out = document.querySelector('.out-14');
+    out.innerHTML = inp.value;
 }
 
 document.querySelector('.b-14').onclick = f14;
@@ -172,7 +189,12 @@ document.querySelector('.b-14').onclick = f14;
 // Создайте text-area.t-15, input.i-15 и button.b-15 - при нажатии на кнопку выводите текст из input.i-15 в textarea.t-15 и на страницу в out-15.
 
 function f15() {
-
+    let inp = document.querySelector('.i-15');
+    let out = document.querySelector('.t-15');
+    let out2 = document.querySelector('.out-15');
+    out.innerHTML = inp.value;
+    out2.innerHTML = inp.value;
+    
 }
 
 document.querySelector('.b-15').onclick = f15;
