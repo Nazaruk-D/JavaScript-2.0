@@ -2,7 +2,7 @@
 // Создайте button.b-1 - при нажатии на него выводите alert с номером задачи. Номер задачи просто пропишите вручную.
 
 function f1() {
-
+alert('Task 1');
 }
 
 document.querySelector('.b-1').onclick = f1;
@@ -12,7 +12,7 @@ document.querySelector('.b-1').onclick = f1;
 // Создайте input.b-2 type=button - при нажатии на него выводите alert с номером задачи. Номер задачи просто пропишите вручную.
 
 function f2() {
-
+alert('Task 2');
 }
 
 document.querySelector('.b-2').onclick = f2;
@@ -22,7 +22,7 @@ document.querySelector('.b-2').onclick = f2;
 // Создайте p.p-3 - при нажатии на него выводите alert с номером задачи.
 
 function f3() {
-
+alert('Task 3');
 }
 
 document.querySelector('.p-3').onclick = f3;
@@ -31,6 +31,14 @@ document.querySelector('.p-3').onclick = f3;
 // Task 4. Создайте input(checkbox).i-4 и button.b-4 - при нажатии на кнопку выводите true если checkbox выбран и false если не выбран. Вывод везде в задачах, где не указано другое, осуществляется в div.out-номер задачи. В данном случае div.out-4
 
 function f4() {
+    let myCheckBox = document.querySelector('.i-4');
+    let out = document.querySelector('.out-4');
+    if (myCheckBox.checked) {
+        out.innerHTML = true;
+    }
+    else {
+        out.innerHTML = false;
+    }
 
 }
 
@@ -40,7 +48,15 @@ document.querySelector('.b-4').onclick = f4;
 //Создайте input(checkbox).i-5 и button.b-5. Для checkbox добавьте value="task-5" - при нажатии на кнопку b-5 выводите value checkbox если checkbox выбран и false если не выбран. Вывод везде в задачах, где не указано другое, осуществляется в div.out-номер задачи. В данном случае div.out-5
 
 function f5() {
-
+    let myCheckBox = document.querySelector('.i-5');
+    let out = document.querySelector('.out-5');
+    console.log('.task-5');
+    if (myCheckBox.checked) {
+        out.innerHTML = document.querySelector('.i-5').value;
+    }
+    else {
+        out.innerHTML = false;
+    }
 }
 
 document.querySelector('.b-5').onclick = f5;
