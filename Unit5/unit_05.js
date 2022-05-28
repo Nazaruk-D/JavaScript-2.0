@@ -96,7 +96,13 @@ document.querySelector('.b-5').onclick = t5;
 //
 
 function t6() {
-
+    let out = '';
+    let inp = document.querySelector('.i-6');
+    for (i = 0; i < inp.value; i++) {
+        out += "*******<br>";
+        console.log(i);
+    }
+    document.querySelector('.out-6').innerHTML = out;
 }
 
 document.querySelector('.b-6').onclick = t6;
@@ -110,7 +116,12 @@ document.querySelector('.b-6').onclick = t6;
 // Задача решается с помощью цикла.
 
 function t7() {
-
+    let out = '';
+    let inp = document.querySelector('.i-7');
+    for (let i = inp.value; i >= 0; i--) {
+        out += i + ' ';
+    }
+    document.querySelector('.out-7').innerHTML = out;
 }
 
 document.querySelector('.b-7').onclick = t7;
