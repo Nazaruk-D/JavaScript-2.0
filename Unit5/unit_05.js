@@ -136,7 +136,13 @@ document.querySelector('.b-7').onclick = t7;
 // Задача решается с помощью цикла.
 
 function t8() {
-
+    let out = '';
+    let inp1 = document.querySelector('.i-81');
+    let inp2 = document.querySelector('.i-82');
+    for (i = inp1.value; i <= inp2.value; i++) {
+        out += i + ' ';
+    }
+    document.querySelector('.out-8').innerHTML = out;
 }
 
 document.querySelector('.b-8').onclick = t8;
@@ -153,8 +159,22 @@ document.querySelector('.b-8').onclick = t8;
 // цикл - один
 
 function t9() {
-
+    let out = '';
+    let inp1 = document.querySelector('.i-91');
+    let inp2 = document.querySelector('.i-92');
+        if (inp1.value < inp2.value) {
+            for (i = inp1.value; i <= inp2.value; i++) {
+            out += i + ' '; 
+            }
+        }
+        else {
+            for (i = inp2.value; i <= inp1.value; i++) {
+            out += i + ' ';  
+            }
+        }
+    document.querySelector('.out-9').innerHTML = out;
 }
+    
 
 document.querySelector('.b-9').onclick = t9;
 
@@ -164,7 +184,11 @@ document.querySelector('.b-9').onclick = t9;
 // Разделитель - пробел. Задача решается через цикл, а четность - через шаг (равный 2).
 
 function t10() {
-
+    let out = '';
+    for (i = 1950; i <= 2000; i = i + 2) {
+        out += i + ' '; 
+    }
+    document.querySelector('.out-10').innerHTML = out;
 }
 
 document.querySelector('.b-10').onclick = t10;
@@ -179,7 +203,11 @@ document.querySelector('.b-10').onclick = t10;
 
 
 function t11() {
-
+    let out = '';
+    let inp = document.querySelectorAll('div-11');
+    console.log(inp);
+    // for (i = 0; ; i++)
+    // document.querySelectorAll('.out-11') = out;
 }
 
 document.querySelector('.b-11').onclick = t11;
