@@ -254,7 +254,14 @@ document.querySelector('.b-13').onclick = t13;
 
 
 function t14() {
-
+    let out = '';
+    let inp = document.getElementsByName('i-14');
+    for (i = 0; i < inp.length; i++) {
+        if (inp[i].checked) {
+        out = inp[i].value;
+        }
+    }
+    document.querySelector('.out-14').innerHTML = out;
 }
 
 document.querySelector('.b-14').onclick = t14;
@@ -266,7 +273,11 @@ document.querySelector('.b-14').onclick = t14;
 // Подсказка (10 - i) + ' ' + i
 
 function t15() {
-
+    let out = '';
+    for (i = 0; i <= 10 ; i++) {
+        out += (10 - i) + ' ' + i + ' ';
+    }
+    document.querySelector('.out-15').innerHTML = out;
 }
 
 document.querySelector('.b-15').onclick = t15;
