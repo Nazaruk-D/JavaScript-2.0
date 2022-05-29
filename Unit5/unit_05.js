@@ -201,13 +201,13 @@ document.querySelector('.b-10').onclick = t10;
 //     В результате должно получиться так:
 //     one 3 4 two
 
-
 function t11() {
     let out = '';
-    let inp = document.querySelectorAll('div-11');
-    console.log(inp);
-    // for (i = 0; ; i++)
-    // document.querySelectorAll('.out-11') = out;
+    let div = document.querySelectorAll('.div-11');
+    for (i = 0; i < div.length; i++) {
+        out += div[i].textContent + ' ';
+    }
+    document.querySelector('.out-11').textContent = out;
 }
 
 document.querySelector('.b-11').onclick = t11;
@@ -220,6 +220,11 @@ document.querySelector('.b-11').onclick = t11;
 
 
 function t12() {
+    let out = '';
+    let div = document.querySelectorAll('.div-12');
+    for ( i = 0; i < div.length; i++) {
+        div[i].style.background = 'orange';
+    }
 
 }
 
