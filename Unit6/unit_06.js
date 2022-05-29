@@ -185,22 +185,28 @@ function t8() {
 document.querySelector('.b-8').onclick = t8;
 
 
-//  Task 9
-// <p>С помощью вложенных циклов, нарисуйте строку:</p>
-// <pre>
-// 1
-// 1 2
-// 1 2 3
-// 1 2 3 4
-// 1 2 3 4 5
-// </pre>
-// <p>Внешний цикл выводит перенос строки br. Вложенный цикл рисует цифры</p>
-function t9() {
+// //  Task 9
+// // <p>С помощью вложенных циклов, нарисуйте строку:</p>
+// // <pre>
+// // 1
+// // 1 2
+// // 1 2 3
+// // 1 2 3 4
+// // 1 2 3 4 5
+// // </pre>
+// // <p>Внешний цикл выводит перенос строки br. Вложенный цикл рисует цифры</p>
 
+function t9() {
+    let out = document.querySelector('.out-9');
+    for (let i = 0; i < 6; i++) {
+        for (let k = 0; k < i; k++) {
+        out.innerHTML += `${k + 1}` + ' ';
+        }
+        out.innerHTML += '<br>';
+    }
 }
 
 document.querySelector('.b-9').onclick = t9;
-
 
 //  Task 10
 // <p>С помощью вложенных циклов, нарисуйте строку:</p>
@@ -214,7 +220,34 @@ document.querySelector('.b-9').onclick = t9;
 // <p>Внешний цикл выводит перенос строки br и запускается от 0 до 6.</p>
 // <p>Вложенный цикл рисует цифры от 0 до 9. Обратите внимание, что первый ряд - есть ведущий нуль. Здесь все просто - проверили, если число меньше 10 - то конкатенируем нуль.</p>
 function t10() {
-
+    let out = document.querySelector('.out-10');
+    for (let i = 0; i < 5; i++) {
+        for (let k = 0; k < 10; k++) {  
+            if (k < 9 && i == 0 ) {
+                out.innerHTML += 0 + ((i * 10) + k + 1 + ' ');
+                // out.innerHTML += `0${(i * 10) + k + 1}` + ' ';
+                console.log(i.value);
+            }
+            else {
+                out.innerHTML += (i * 10) + k + 1 + ' ';
+                // out.innerHTML += `${i * 10 + k + 1}` + ' ';
+            }
+        }
+        out.innerHTML += '<br>';
+    }
 }
 
 document.querySelector('.b-10').onclick = t10;
+
+// function t10() {
+//     let out10 = "";
+//     for (let i = 0; i < 5; i++) {
+//       for (let k = 1; k <= 10; k++) {
+//         out10 += k < 10 && i == 0 ? `0${k} ` : `${+(i*10) + k} `;
+//       }
+//       out10 += "<br>";
+//     }
+//     document.querySelector(".out-10").innerHTML = out10;
+//   }
+  
+//   document.querySelector(".b-10").onclick = t10;
