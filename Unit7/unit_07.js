@@ -102,7 +102,7 @@ document.querySelector('.b-7').onclick = function () {
 function t8(str) {
 
     let a = str.trimStart();
-    return `${a}`;
+    return `${str}`;
 }
 
 document.querySelector('.b-8').onclick = function () {
@@ -114,11 +114,19 @@ document.querySelector('.b-8').onclick = function () {
 // Напишите функцию t9, которая принимает число и возвращает true, если число четное, и false если не четное. 
 
 function t9(num) {
-
+    if (num %2 == 0) {
+        return true;
+        console.log(num);
+    }
+    else if (num %2 != 0) {
+        return  false;
+        
+    }
 }
 
+
 document.querySelector('.b-9').onclick = function () {
-    document.querySelector('.out-9').textContent = t9(15);
+    document.querySelector('.out-9').textContent = t9(12);
 }
 
 
@@ -126,9 +134,18 @@ document.querySelector('.b-9').onclick = function () {
 // Создайте функцию t10, которая принимает 2 числа и возвращает большее из них.В случае равенства - любое из чисел.
 
 function t10(a, b) {
-
+    if (a > b) {
+        return a;
+    }
+    else if (b > a) {
+        return b;
+        
+    }
+    else {
+        return a;
+    }
 }
 
 document.querySelector('.b-10').onclick = function () {
-    document.querySelector('.out-10').textContent = t10(3, 9);
+    document.querySelector('.out-10').textContent = t10(9, 9);
 }
