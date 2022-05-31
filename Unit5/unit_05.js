@@ -98,7 +98,7 @@ document.querySelector('.b-5').onclick = t5;
 function t6() {
     let out = '';
     let inp = document.querySelector('.i-6');
-    for (i = 0; i < inp.value; i++) {
+    for (let i = 0; i < inp.value; i++) {
         out += "*******<br>";
         console.log(i);
     }
@@ -139,7 +139,7 @@ function t8() {
     let out = '';
     let inp1 = document.querySelector('.i-81');
     let inp2 = document.querySelector('.i-82');
-    for (i = inp1.value; i <= inp2.value; i++) {
+    for (let i = inp1.value; i <= inp2.value; i++) {
         out += i + ' ';
     }
     document.querySelector('.out-8').innerHTML = out;
@@ -163,12 +163,12 @@ function t9() {
     let inp1 = document.querySelector('.i-91');
     let inp2 = document.querySelector('.i-92');
         if (inp1.value < inp2.value) {
-            for (i = inp1.value; i <= inp2.value; i++) {
+            for (let i = inp1.value; i <= inp2.value; i++) {
             out += i + ' '; 
             }
         }
         else {
-            for (i = inp2.value; i <= inp1.value; i++) {
+            for (let i = inp2.value; i <= inp1.value; i++) {
             out += i + ' ';  
             }
         }
@@ -204,7 +204,7 @@ document.querySelector('.b-10').onclick = t10;
 function t11() {
     let out = '';
     let div = document.querySelectorAll('.div-11');
-    for (i = 0; i < div.length; i++) {
+    for (let i = 0; i < div.length; i++) {
         out += div[i].textContent + ' ';
     }
     document.querySelector('.out-11').textContent = out;
@@ -222,7 +222,7 @@ document.querySelector('.b-11').onclick = t11;
 function t12() {
     let out = '';
     let div = document.querySelectorAll('.div-12');
-    for ( i = 0; i < div.length; i++) {
+    for (let i = 0; i < div.length; i++) {
         div[i].style.background = 'orange';
     }
 
@@ -239,7 +239,7 @@ document.querySelector('.b-12').onclick = t12;
 function t13() {
     let out = '';
     let inp = document.querySelectorAll('input.i-13');
-    for (i = 0; i < inp.length; i++) {
+    for (let i = 0; i < inp.length; i++) {
         inp[i].value = i + 1;
     }
 }
@@ -256,7 +256,7 @@ document.querySelector('.b-13').onclick = t13;
 function t14() {
     let out = '';
     let inp = document.getElementsByName('i-14');
-    for (i = 0; i < inp.length; i++) {
+    for (let i = 0; i < inp.length; i++) {
         if (inp[i].checked) {
         out = inp[i].value;
         }
@@ -274,7 +274,7 @@ document.querySelector('.b-14').onclick = t14;
 
 function t15() {
     let out = '';
-    for (i = 0; i <= 10 ; i++) {
+    for (let i = 0; i <= 10 ; i++) {
         out += (10 - i) + ' ' + i + ' ';
     }
     document.querySelector('.out-15').innerHTML = out;
