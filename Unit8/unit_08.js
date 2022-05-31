@@ -23,11 +23,9 @@ function t2() {
     let num = 0;
     let out = document.querySelector('.out-2');
     while (num < 122) {
-        num++;
-        if (num %2 == 0) {
+        num = num + 2;
             out.innerHTML += num + ' ';
         }
-    }
 
 }
 
@@ -86,6 +84,7 @@ function t5() {
         out.innerHTML += num + '_**';   
         }
     }
+    
 }
 
 document.querySelector('.b-5').onclick = t5;
@@ -100,6 +99,13 @@ document.querySelector('.b-5').onclick = t5;
 // Количество строк (итераций, повторений) цикла  while вводит пользователь в i-6.
 
 function t6() {
+    let num = 0;
+    let out = document.querySelector('.out-6');
+    let inp = document.querySelector('.i-6');
+    while (num < inp.value) {
+        num++;
+        out.innerHTML += '******' + '<br>'; 
+    }
 
 }
 
@@ -114,7 +120,14 @@ document.querySelector('.b-6').onclick = t6;
 // Задача решается с помощью цикла  while.
 
 function t7() {
-
+    let num = 0;
+    let out = document.querySelector('.out-7');
+    let inp = document.querySelector('.i-7');
+    out.innerHTML =  inp.value + ' '; 
+    while (num < inp.value) {
+        num++;
+        out.innerHTML += inp.value  - num + ' '; 
+    }
 }
 
 document.querySelector('.b-7').onclick = t7;
@@ -128,9 +141,24 @@ document.querySelector('.b-7').onclick = t7;
 //     4 5 6 7 8
 // Задача решается с помощью цикла  while.
 
-function t8() {
 
+function t8() {
+    let inp1 = document.querySelector('.i-81');
+    let out = document.querySelector('.out-8');
+    let inp2 = document.querySelector('.i-82');
+    let p = 0;
+    out.innerHTML = '';
+    while (p <= inp2.value) {
+        if (p >= inp1.value) {
+        out.innerHTML += p + ' '; 
+        }
+        p++;
+
+    }
+    inp1.value = '';
+    inp2.value = '';
 }
+
 
 document.querySelector('.b-8').onclick = t8;
 
@@ -145,7 +173,30 @@ document.querySelector('.b-8').onclick = t8;
 // Задача решается с помощью цикла. Подсказка - вначале делаем проверку, а потом запускаем цикл  while.
 
 function t9() {
+    let inp1 = document.querySelector('.i-91');
+    let inp2 = document.querySelector('.i-92');
+    let out = document.querySelector('.out-9');
+    let p = 0;
+    out.innerHTML = '';
+    if (inp1.value < inp2.value) {
+        while (p <= inp2.value) {
+            if (p >= inp1.value) {
+            out.innerHTML += p + ' '; 
+            }
+        p++;
+        }
+    }
 
+    else if (inp1.value > inp2.value) {
+        while (p <= inp1.value) {
+            if (p >= inp2.value) {
+            out.innerHTML += p + ' '; 
+            }
+            p++;
+        }
+    }
+    inp1.value = '';
+    inp2.value = '';
 }
 
 document.querySelector('.b-9').onclick = t9;
@@ -156,7 +207,14 @@ document.querySelector('.b-9').onclick = t9;
 // Разделитель - пробел. Задача решается через цикл, а четность - через шаг (равный 2).
 
 function t10() {
-
+    let num = 1950;
+    let out = document.querySelector('.out-10');
+    while (num <= 2000) {
+        if (num %2 == 0) {
+            out.innerHTML += num + ' ';
+        }    
+        num++;
+    }
 }
 
 document.querySelector('.b-10').onclick = t10;
