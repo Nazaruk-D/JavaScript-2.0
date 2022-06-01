@@ -218,7 +218,11 @@ document.querySelector('.b-15').onclick = f15;
 // Добавьте кнопку .b-16, которая запускает функцию f16. Функция создает через createElement div c текстом 16 и добавляет ему класс bg-16. Созданный div добавляется в out-16 с помощью after.
 
 function f16() {
-    // out = 
+    let out = document.querySelector('.out-16');
+    let crDiv = document.createElement ('div');
+    crDiv.innerHTML = '16';
+    crDiv.classList.add ('bg-16');
+    out.after(crDiv);
 
 }
 
@@ -228,6 +232,11 @@ document.querySelector('.b-16').onclick = f16;
 // Добавьте кнопку .b-17, которая запускает функцию f17. Функция создает через createElement div c текстом 17 и добавляет ему класс bg-17. Созданный div заменяет  out-17 с помощью replaceWith.
 
 function f17() {
+    let out = document.querySelector ('.out-17');
+    let crDiv = document.createElement ('div');
+    crDiv.innerHTML = '17';
+    crDiv.classList.add ('bg-17');
+    out.replaceWith(crDiv);
 
 }
 
@@ -237,6 +246,9 @@ document.querySelector('.b-17').onclick = f17;
 // Добавьте кнопку .b-18, которая запускает функцию f18. Функция с помощью getAttribute получает data-b атрибут с параграф p-18 и выводит в out-18.
 
 function f18() {
+    out = document.querySelector ('.out-18');
+    inp = document.querySelector ('.p-18');
+    out.innerHTML +=  inp.getAttribute('data-b');
 
 }
 
@@ -246,7 +258,11 @@ document.querySelector('.b-18').onclick = f18;
 // Добавьте кнопку .b-19, которая запускает функцию f19. Функция с помощью getAttribute получает data-b атрибут с параграфов p-19 и выводит в out-19 через пробел. Обратите внимание, что элементов p-19 больше одного.
 
 function f19() {
-
+    out = document.querySelector ('.out-19');
+    inp = document.querySelectorAll ('.p-19');
+        for (let i = 0; i < inp.length; i++) {
+        out.innerHTML +=  inp[i].getAttribute('data-b') + '<br>';
+        }
 }
 
 document.querySelector('.b-19').onclick = f19;
@@ -255,6 +271,8 @@ document.querySelector('.b-19').onclick = f19;
 // Добавьте кнопку .b-20, которая запускает функцию f20. Функция с помощью setAttribute присваивает атрибут title="go" в div.out-20.
 
 function f20() {
+    let div = document.querySelector('.out-20');
+    div.setAttribute('tittle', 'go');
 
 }
 
