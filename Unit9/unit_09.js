@@ -145,7 +145,10 @@ for (let i = 0; i < x10.length; i++) {
 
 
 function f11() {
-
+    let out11 = document.querySelector ('.out-11');
+    let crDiv = document.createElement ('div');
+    crDiv.innerHTML  = '25';
+    out11.appendChild(crDiv);
 }
 
 document.querySelector('.b-11').onclick = f11;
@@ -155,7 +158,11 @@ document.querySelector('.b-11').onclick = f11;
 
 
 function f12() {
-
+    let out12 = document.querySelector ('.out-12');
+    let crDiv = document.createElement ('div');
+    crDiv.innerHTML  = '12';
+    crDiv.classList.add ('bg-12');
+    out12.appendChild(crDiv);
 }
 
 document.querySelector('.b-12').onclick = f12;
@@ -164,11 +171,16 @@ document.querySelector('.b-12').onclick = f12;
 // Добавьте кнопку .b-13, которая запускает функцию f13. Функция создает через createElement div c текстом pushMe и добавляет ему класс bg-13. Также, созданному div добавляется событие onclick, по которому выполняется функция f13_1. Созданный div добавляется в out-13.
 
 function f13() {
-
+    let out13 = document.querySelector ('.out-13');
+    let crDiv = document.createElement ('div');
+    crDiv.innerHTML = 'Push me ';
+    crDiv.classList.add ('bg-13');
+    out13.appendChild(crDiv);
+    crDiv.onclick = f13_1;
 }
 
 function f13_1() {
-    document.querySelector('.out-13-1').innerHTML += this.innerHTML;
+    document.querySelector('.out-13-1').innerHTML += this.innerHTML + '<br>';
 }
 
 
@@ -179,7 +191,11 @@ document.querySelector('.b-13').onclick = f13;
 
 
 function f14() {
-
+    let out = document.querySelector ('.out-14');
+    let crDiv = document.createElement ('div');
+    crDiv.innerHTML = '14';
+    crDiv.classList.add ('bg-14');
+    out.prepend(crDiv);
 }
 
 document.querySelector('.b-14').onclick = f14;
@@ -188,6 +204,11 @@ document.querySelector('.b-14').onclick = f14;
 // Добавьте кнопку .b-15, которая запускает функцию f15. Функция создает через createElement div c текстом 15 и добавляет ему класс bg-15. Созданный div добавляется в out-15 с помощью before.
 
 function f15() {
+    let out = document.querySelector ('.out-15');
+    let crDiv = document.createElement ('div');
+    crDiv.innerHTML = '15';
+    crDiv.classList.add ('bg-15');
+    out.before(crDiv);
 
 }
 
@@ -197,6 +218,7 @@ document.querySelector('.b-15').onclick = f15;
 // Добавьте кнопку .b-16, которая запускает функцию f16. Функция создает через createElement div c текстом 16 и добавляет ему класс bg-16. Созданный div добавляется в out-16 с помощью after.
 
 function f16() {
+    // out = 
 
 }
 
