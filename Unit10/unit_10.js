@@ -177,7 +177,8 @@ document.querySelector('.b-10').onclick = f10;
 
 
 // Task 11
-// Напишите функцию, которая меняет местами второй (индекс 2) и четвертый (индекс 4) элемент массива ar11 и выводит его в out-11. Разделитель - пробел.
+// Напишите функцию, которая меняет местами второй (индекс 2) и четвертый (индекс 4) элемент массива ar11 и выводит его в out-11. 
+// Разделитель - пробел.
 
 // Во всех задачах где говорим второй, третий и т.д. имеем ввиду индекс
 // Вывод - по нажатию кнопки b-11
@@ -186,14 +187,22 @@ document.querySelector('.b-10').onclick = f10;
 let ar11 = [2, 3, 4, 5, 6, 7];
 
 function f11() {
-
+    let out = '';
+    let ch = ar11[2];
+    ar11[2] = ar11[4];
+    ar11[4] = ch;
+    for (let i = 0; i < ar11.length; i++) {
+        out += ar11[i] + ' ';
+    }
+    document.querySelector('.out-11').innerHTML = out;
 }
 
 document.querySelector('.b-11').onclick = f11;
 
 
 // Task 12
-// Напишите функцию f12, которая меняет местами нулевой и последний элемент массива ar12 и выводит его в out-12. Разделитель - пробел. Последний элемент вычислять через длину массива.
+// Напишите функцию f12, которая меняет местами нулевой и последний элемент массива ar12 и выводит его в out-12. 
+// Разделитель - пробел. Последний элемент вычислять через длину массива.
 // Во всех задачах где говорим второй, третий и т.д. имеем ввиду индекс
 // Вывод - по нажатию кнопки b-12
 // Вывод в out-12
@@ -201,7 +210,14 @@ document.querySelector('.b-11').onclick = f11;
 let ar12 = ['test', 'west', 'list', 'class', 'best'];
 
 function f12() {
-
+    let out = '';
+    let ch = ar12[0];
+    ar12[0] = ar12[ar12.length - 1];
+    ar12[ar11.length - 0] = ch;
+    for (let i = 0; i < ar12.length; i++) {
+        out += ar12[i] + ' ';
+    }
+    document.querySelector('.out-12').innerHTML = out;
 }
 
 document.querySelector('.b-12').onclick = f12;
@@ -218,7 +234,12 @@ document.querySelector('.b-12').onclick = f12;
 let ar13 = ['test', 'west', 'list', 'class', 'best'];
 
 function f13() {
+    let out = '';
+    for (let i = 0; i < ar13.length; i++) {
+    out += ` ${i} ${ar13[i]}`;
 
+    }
+    document.querySelector('.out-13').innerHTML = out;
 }
 
 document.querySelector('.b-13').onclick = f13;
@@ -233,7 +254,12 @@ document.querySelector('.b-13').onclick = f13;
 let ar14 = [1, 2, 3, 'hello', 66];
 
 function f14() {
+    let out = '';
+    for (let i = 0; i < ar14.length; i++) {
+        out += `${ar14[(ar14.length-1) - i]} `;
 
+    }
+    document.querySelector('.out-14').innerHTML = out;
 }
 
 document.querySelector('.b-14').onclick = f14;
@@ -247,7 +273,13 @@ document.querySelector('.b-14').onclick = f14;
 let ar15 = [0, 2, 5, -4, 6, 22, -9, -12, 8, 12, 13, 78];
 
 function f15() {
+    let out = '';
+    for (let i = 0; i < ar15.length; i++) {
+        if (ar15[i] > 0)
+        out += `${ar15[i]} `;
 
+    }
+    document.querySelector('.out-15').innerHTML = out;
 }
 
 document.querySelector('.b-15').onclick = f15;
