@@ -402,7 +402,7 @@ console.log(ar20);
 function f20() {
     let out = '';
     let sum = 0;
-    for (let i = 0; i < ar20.length; i++) {
+    for (let i = 0; i < ar20.length; i++) { //
         sum = sum + ar20[i];
         out = sum;
     }
