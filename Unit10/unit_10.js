@@ -395,6 +395,9 @@ document.querySelector('.b-19').onclick = f19;
 // Вывод в out-20
 
 let ar20 = [4, 5, 6, 7, 8, 9, 10];
+ar20.push(1, 2, 5);
+ar20.shift(0);
+console.log(ar20);
 
 function f20() {
     let out = '';
@@ -407,3 +410,6 @@ function f20() {
 }
 
 document.querySelector('.b-20').onclick = f20;
+
+
+
