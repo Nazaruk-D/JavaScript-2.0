@@ -249,7 +249,8 @@ document.querySelector('.b-10').onclick = () => {
 
 
 // Task 11
-// При нажатии b-11 выполняете функцию f11. Функция должна получить ключ из i-11 и удалить запись из массива a11 с таким ключем. После этого вывести массив в out-11. Для вывода используйте функцию f5.
+// При нажатии b-11 выполняете функцию f11. Функция должна получить ключ из i-11 и удалить запись из массива a11 с таким ключем. 
+// После этого вывести массив в out-11. Для вывода используйте функцию f5.
 
 let a11 = {
     "b": 17,
@@ -260,12 +261,27 @@ let a11 = {
 };
 
 function f11() {
+    let inp = document.querySelector('.i-11').value;
+    let out = '';
+    for (let key in a11) {
+        if (inp == key) {
+            console.log (a11[key]);
+            delete a11[key];
+            break;
+        }
+    }
+    for (let key in a11) {
+    out += key + ':' + a11[key] + '<br>';
+    }
+    document.querySelector('.out-11').innerHTML = out;
+    
 }
 
 document.querySelector('.b-11').onclick = f11;
 
 // Task 12
-//  При нажатии b-12 выполняете функцию f12. Функция должна получить значение из i-12 и удалить запись из массива a12 с таким значением. После этого вывести массив в out-12. Для вывода используйте функцию f5.
+//  При нажатии b-12 выполняете функцию f12. Функция должна получить значение из i-12 и удалить запись из массива a12 
+// с таким значением. После этого вывести массив в out-12. Для вывода используйте функцию f5.
 
 let a12 = {
     "b": 17,
@@ -276,7 +292,13 @@ let a12 = {
 };
 
 function f12() {
-
+    let inp = document.querySelector('.i-12').value;
+    for (let key in a12) {
+        if (inp == a12[key]) {
+            delete a12[key];
+        }
+    }
+    f5(a12, '.out-12');
 }
 
 document.querySelector('.b-12').onclick = f12;
@@ -292,13 +314,24 @@ let a13 = {
 };
 
 function f13() {
-
+    let out = '';
+    let sum = 0;
+    for (let key in a13) {
+        console.log(a13[key]);
+        if (typeof(a13[key]) == 'number') {
+            sum = sum + a13[key];
+            out = sum;
+            
+        }
+    }
+    document.querySelector('.out-13').innerHTML = out;
 }
 
 document.querySelector('.b-13').onclick = f13;
 
 // Task 14
-// При нажатии b-14 выполняете функцию f14. Функция должна в out-14 выводить нулевые (по индексу)  элементы вложенных массивов в a14. Вывод через пробел.
+// При нажатии b-14 выполняете функцию f14. Функция должна в out-14 выводить нулевые (по индексу)  
+// элементы вложенных массивов в a14. Вывод через пробел.
 // Ожидаемый вывод - 1 3 6 9
 
 let a14 = {
@@ -309,7 +342,11 @@ let a14 = {
 };
 
 function f14() {
-
+   let out = '';
+   for (let key in a14) {
+    console.log(a14[key]);
+   }
+   
 }
 
 document.querySelector('.b-14').onclick = f14;
