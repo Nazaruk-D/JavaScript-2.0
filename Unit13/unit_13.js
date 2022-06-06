@@ -317,7 +317,6 @@ function f13() {
     let out = '';
     let sum = 0;
     for (let key in a13) {
-        console.log(a13[key]);
         if (typeof(a13[key]) == 'number') {
             sum = sum + a13[key];
             out = sum;
@@ -344,9 +343,12 @@ let a14 = {
 function f14() {
    let out = '';
    for (let key in a14) {
-    console.log(a14[key]);
+        for (let i = 0; i < 1; i++) {
+            out += a14[key][0] + ' ';
+            // console.log (a14[key]);
+        }
    }
-   
+   document.querySelector('.out-14').innerHTML = out;
 }
 
 document.querySelector('.b-14').onclick = f14;
@@ -364,13 +366,22 @@ let a15 = {
 };
 
 function f15() {
-
+    let out = '';
+    for (let key in a15) {
+        console.log(a15[key].length);
+        for (let i = 0; i < a15[key].length; i++) {
+            out += `${a15[key][i]} `;
+        }
+        
+   }
+   document.querySelector('.out-15').innerHTML = out;
 }
 
 document.querySelector('.b-15').onclick = f15;
 
 // Task 16
-// При нажатии b-16 выполняете функцию f16. Функция должна в out-16 выводить элементы name вложенных массивов в a16. Вывод через пробел.
+// При нажатии b-16 выполняете функцию f16. Функция должна в out-16 выводить элементы name вложенных массивов в a16. 
+// Вывод через пробел.
 
 let a16 = {
     "iis8sj": {
@@ -388,14 +399,19 @@ let a16 = {
 }
 
 function f16() {
-
+    let out = '';
+    for (let key in a16) {
+        out += a16[key]["name"] + ' ';
+   }
+    document.querySelector('.out-16').innerHTML = out;
 }
 
 document.querySelector('.b-16').onclick = f16;
 
 
 // Task 17
-// При нажатии b-17 выполняете функцию f17. Функция должна в out-17 выводить элементы name вложенных массивов в a17 для который age > 30. Вывод через пробел.
+// При нажатии b-17 выполняете функцию f17. Функция должна в out-17 выводить элементы name вложенных массивов в 
+// a17 для который age > 30. Вывод через пробел.
 
 let a17 = {
     "iis8sj": {
@@ -413,13 +429,20 @@ let a17 = {
 }
 
 function f17() {
-
+    let out = '';
+    for (let key in a17) {
+        if (a17[key]["age"] > 30) {
+        out += a17[key]["name"] + ' ';
+        }
+   }
+    document.querySelector('.out-17').innerHTML = out;
 }
 
 document.querySelector('.b-17').onclick = f17;
 
 // Task 18
-// При нажатии b-18 выполняете функцию f18. Функция должна в out-18 вывести станции метро из массива a18 той ветки, которую пользователь ввел в i-18. Вывод станций - через пробел. Если ветка не найдена выводите пустую строку.
+// При нажатии b-18 выполняете функцию f18. Функция должна в out-18 вывести станции метро из массива a18 той ветки, 
+// которую пользователь ввел в i-18. Вывод станций - через пробел. Если ветка не найдена выводите пустую строку.
 
 let a18 = {
     "red": ['Akademmistechko', 'Nyvky', 'Universytet', 'Lisova'],
@@ -428,8 +451,22 @@ let a18 = {
 }
 
 function f18() {
-
+    let inp = document.querySelector('.i-18').value;
+        out = '';
+        for (let key in a18) {
+            if (inp == key) {
+                for (let i = 0; i < a18[key].length; i++){
+                out += a18[key][i]+ ' ';
+                }
+            }
+            else {
+                out += ' ';
+            }
+        }
+    document.querySelector('.out-18').innerHTML = out;
 }
+
+document.querySelector('.b-18').onclick = f18;
 
 // Task 19
 // При нажатии b-19 выполняете функцию f19. Функция должна в out-19 вывести цвет ветки станции которую пользователь ввел в i-19. Пользователь может вводить текст как с большой, так и с маленькой буквы. Если ветка не найдена - выводите пустую строку.
