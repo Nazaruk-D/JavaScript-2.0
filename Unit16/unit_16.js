@@ -194,7 +194,8 @@ document.querySelector('.b-10').addEventListener('click', () => {
 });
 
 // Task 11
-//При нажатии .b-11 выполняете функцию f11. Функция должна c помощью for in перебрать объект a11 и вывести в out-11 только те значения, которые больше 10. Вывод - через пробел.
+//При нажатии .b-11 выполняете функцию f11. Функция должна c помощью for in перебрать объект a11 и вывести в out-11 только те значения,
+//которые больше 10. Вывод - через пробел.
 
 let a11 = {
     one : 11,
@@ -204,6 +205,15 @@ let a11 = {
 }
 
 function f11() {
+    out = '';
+    for (let key in a11) {
+        console.log(a11[key]);
+        if( a11[key] > 10) {
+            out += a11[key] + ' ';
+        }
+    }
+    document.querySelector('.out-11').innerHTML = out;
+
 
 }
 
@@ -215,6 +225,12 @@ document.querySelector('.b-11').addEventListener('click', f11);
 let a12 = [4,5,6,7];
 
 function f12() {
+    let out = '';
+    for (let item of a12) {
+        console.log(item);
+        out += item + ' ';
+    }
+    document.querySelector('.out-12').innerHTML = out;
 
 }
 
@@ -227,7 +243,12 @@ document.querySelector('.b-12').addEventListener('click', f12);
 let a13 = 'testone';
 
 function f13() {
-
+    let out = '';
+    for (let item of a13) {
+        console.log(item);
+        out += item + ' ';
+    }
+    document.querySelector('.out-13').innerHTML = out;
 }
 
 document.querySelector('.b-13').addEventListener('click', f13);
@@ -240,17 +261,32 @@ document.querySelector('.b-13').addEventListener('click', f13);
 let a14 = new Set([4,5,6]);
 
 function f14() {
-
+    let out = '';
+    for (let item of a14) {
+        console.log(item);
+        out += item + ' ';
+    }
+    document.querySelector('.out-14').innerHTML = out;
 }
 
 document.querySelector('.b-14').addEventListener('click', f14);
 
 // Task 15
-//При нажатии .b-15 выполняете функцию f15. Функция должна получить NodeList элементов .out-15 c помощью document.querySelectorAll, затем c помощью for of перебрать полученную коллекцию элементов .out-15 записать внутрь них число 15 ( затерев содержимое).
+//При нажатии .b-15 выполняете функцию f15. Функция должна получить NodeList элементов .out-15 c помощью document.querySelectorAll, 
+// затем c помощью for of перебрать полученную коллекцию элементов .out-15 записать внутрь них число 15 ( затерев содержимое).
 
 
 function f15() {
-
+    // let out = '';    
+    let inp = document.querySelectorAll('.out-15');
+        for (let item of inp) {
+            console.log(item);
+            item.innerHTML = 15;
+        }
+        
+    // document.querySelectorAll('.out-15').innerHTML = inp;
 }
 
 document.querySelector('.b-15').addEventListener('click', f15);
+
+
