@@ -289,4 +289,3 @@ function f15() {
 
 document.querySelector('.b-15').addEventListener('click', f15);
 
-
