@@ -276,3 +276,59 @@ document.querySelector('progress').onmousemove = function () {
     document.querySelector('progress').value = p20;
 }
 
+
+
+let str = 'Hello World';
+function doubleChar(str) {
+    let x = '';
+    // console.log(str.length);
+    for(let i = 0; i < str.length; i++) {
+        x += str[i] + str[i];
+        console.log(str[i]);
+    }
+    return x;
+  }
+//   console.log (doubleChar("Привет"));
+
+
+
+
+  var replaceDots = function(str) {
+    return str.replace(/./, '-');
+  }
+
+//   console.log(replaceDots (str));
+
+
+function fakeBin(x){ 
+return x.split('').map(num => num > 4 ? 1 : 0).join('');
+}
+
+
+function even_or_odd(number) {
+    return number %2==0 ? "Even" : "Odd";
+  }
+//   console.log(even_or_odd(1));
+  
+function squareSum(numbers) {
+    let sum = 0
+    for( let i = 0; i < numbers.length; i++) {
+        sum += numbers[i] **2
+    }
+    return sum
+}
+
+function digitize(n) {
+    // let x = String(n).split('').reverse();
+    let x = n.toString().split('').reverse();
+    let arr = [];
+    for (let i = 0; i < x.length; i++) {
+        arr.push(+x[i]); 
+    }
+    return arr;
+  }
+
+  console.log(digitize(35299));
+
+//   var num = 348597,
+//     arr = num.toString().split("").reverse().map(Number);
