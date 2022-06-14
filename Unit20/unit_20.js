@@ -153,35 +153,178 @@ function t10(event) {
     }
 }
 
-// function f18() {
-//     let x = document.querySelector('.div-18');
-//     x.style.width = 175 + 'px';
-//     x.innerHTML = x.style.width;
-//     console.log(x.style.width);
-// }
-// document.querySelector('.div-18').onmouseenter = f18; 
-
-        //         <input type="text" class="i-10">
-        //         <div class="div-10 block">
-        //             <img src="img/1.png" alt="">
-        //         </div>
-        //         <div class="out-10">
-        //         </div>
-        // </section>
 
 document.querySelector('.i-10').onkeydown = t10;
 
 // Task 11 ============================================
 /*  Проект. 
-1. Выполните в html верстку клавиш клавиатуры. Сверстайте – блок цифровых клавиш от 1 до 0. И ряд клавиш q – p. Добавьте клавишу левый shift, левый  alt, левый ctrl,  пробел, enter.
-2. Добавьте на input .i-11 событие onkeypress или onkeyup или onkeydown ( по вашему выбору). Когда событие происходит ( ввод символа в input) необходимо подсветить ( добавить класс active) клавише с таким символом. Со всех остальных клавиш – удалить класс active.
+1. Выполните в html верстку клавиш клавиатуры. Сверстайте – блок цифровых клавиш от 1 до 0. И ряд клавиш q – p. Добавьте клавишу 
+левый shift, левый  alt, левый ctrl,  пробел, enter.
+2. Добавьте на input .i-11 событие onkeypress или onkeyup или onkeydown ( по вашему выбору). Когда событие происходит 
+( ввод символа в input) необходимо подсветить ( добавить класс active) клавише с таким символом. 
+Со всех остальных клавиш – удалить класс active.
 3. Если вводится следующий символ – повторить удаление active и подсветить клавишу с введенным символом.
-4. Ограничения проекта – тестируются только указанные клавиши в латинской раскладке. Комбинации клавиш не тестируются. Т.е. нажиматься shift+A, ctrl+shift – не будут. Все символы вводятся в нижнем регистре.
+4. Ограничения проекта – тестируются только указанные клавиши в латинской раскладке. Комбинации клавиш не тестируются. 
+Т.е. нажиматься shift+A, ctrl+shift – не будут. Все символы вводятся в нижнем регистре.
 */
 
-function t11() {
-
+function t11(event) {
+    console.log(event);
+    if (event.keyCode == 49) {
+        document.querySelector('.b-1').classList.add('active');
+    }
+    else if (event.keyCode == 50) {
+        document.querySelector('.b-2').classList.add('active');
+    }
+    else if (event.keyCode == 51) {
+        document.querySelector('.b-3').classList.add('active');
+    }
+    else if (event.keyCode == 52) {
+        document.querySelector('.b-4').classList.add('active');
+    }
+    else if (event.keyCode == 53) {
+        document.querySelector('.b-5').classList.add('active');
+    }
+    else if (event.keyCode == 54) {
+        document.querySelector('.b-6').classList.add('active');
+    }
+    else if (event.keyCode == 55) {
+        document.querySelector('.b-7').classList.add('active');
+    }
+    else if (event.keyCode == 56) {
+        document.querySelector('.b-8').classList.add('active');
+    }
+    else if (event.keyCode == 57) {
+        document.querySelector('.b-9').classList.add('active');
+    }
+    else if (event.keyCode == 48) {
+        document.querySelector('.b-0').classList.add('active');
+    }
+    else if (event.keyCode == 81) {
+        document.querySelector('.b-q').classList.add('active');
+    }
+    else if (event.keyCode == 87) {
+        document.querySelector('.b-w').classList.add('active');
+    }
+    else if (event.keyCode == 69) {
+        document.querySelector('.b-e').classList.add('active');
+    }
+    else if (event.keyCode == 82) {
+        document.querySelector('.b-r').classList.add('active');
+    }
+    else if (event.keyCode == 84) {
+        document.querySelector('.b-t').classList.add('active');
+    }
+    else if (event.keyCode == 89) {
+        document.querySelector('.b-y').classList.add('active');
+    }
+    else if (event.keyCode == 85) {
+        document.querySelector('.b-u').classList.add('active');
+    }
+    else if (event.keyCode == 73) {
+        document.querySelector('.b-i').classList.add('active');
+    }
+    else if (event.keyCode == 79) {
+        document.querySelector('.b-o').classList.add('active');
+    }
+    else if (event.keyCode == 80) {
+        document.querySelector('.b-p').classList.add('active');
+    }
+    else if (event.keyCode == 16) {
+        document.querySelector('.b-shift').classList.add('active');
+    }
+    else if (event.keyCode == 18) {
+        document.querySelector('.b-alt').classList.add('active');
+    }
+    else if (event.keyCode == 17) {
+        document.querySelector('.b-ctrl').classList.add('active');
+    }
+    else if (event.keyCode == 32) {
+        document.querySelector('.b-space').classList.add('active');
+    }
+    else if (event.keyCode == 13) {
+        document.querySelector('.b-enter').classList.add('active');
+    }
 }
 
-// ваше событие здесь!!!
+function t12(event) {
+    if (event.keyCode == 49) {
+        document.querySelector('.b-1').classList.remove('active');
+    }
+    else if (event.keyCode == 50) {
+        document.querySelector('.b-2').classList.remove('active');
+    }
+    else if (event.keyCode == 51) {
+        document.querySelector('.b-3').classList.remove('active');
+    }
+    else if (event.keyCode == 52) {
+        document.querySelector('.b-4').classList.remove('active');
+    }
+    else if (event.keyCode == 53) {
+        document.querySelector('.b-5').classList.remove('active');
+    }
+    else if (event.keyCode == 54) {
+        document.querySelector('.b-6').classList.remove('active');
+    }
+    else if (event.keyCode == 55) {
+        document.querySelector('.b-7').classList.remove('active');
+    }
+    else if (event.keyCode == 56) {
+        document.querySelector('.b-8').classList.remove('active');
+    }
+    else if (event.keyCode == 57) {
+        document.querySelector('.b-9').classList.remove('active');
+    }
+    else if (event.keyCode == 48) {
+        document.querySelector('.b-0').classList.remove('active');
+    }
+    else if (event.keyCode == 81) {
+        document.querySelector('.b-q').classList.remove('active');
+    }
+    else if (event.keyCode == 87) {
+        document.querySelector('.b-w').classList.remove('active');
+    }
+    else if (event.keyCode == 69) {
+        document.querySelector('.b-e').classList.remove('active');
+    }
+    else if (event.keyCode == 82) {
+        document.querySelector('.b-r').classList.remove('active');
+    }
+    else if (event.keyCode == 84) {
+        document.querySelector('.b-t').classList.remove('active');
+    }
+    else if (event.keyCode == 89) {
+        document.querySelector('.b-y').classList.remove('active');
+    }
+    else if (event.keyCode == 85) {
+        document.querySelector('.b-u').classList.remove('active');
+    }
+    else if (event.keyCode == 73) {
+        document.querySelector('.b-i').classList.remove('active');
+    }
+    else if (event.keyCode == 79) {
+        document.querySelector('.b-o').classList.remove('active');
+    }
+    else if (event.keyCode == 80) {
+        document.querySelector('.b-p').classList.remove('active');
+    }
+    else if (event.keyCode == 16) {
+        document.querySelector('.b-shift').classList.remove('active');
+    }
+    else if (event.keyCode == 18) {
+        document.querySelector('.b-alt').classList.remove('active');
+    }
+    else if (event.keyCode == 17) {
+        document.querySelector('.b-ctrl').classList.remove('active');
+    }
+    else if (event.keyCode == 32) {
+        document.querySelector('.b-space').classList.remove('active');
+    }
+    else if (event.keyCode == 13) {
+        document.querySelector('.b-enter').classList.remove('active');
+    }
+}
+
+document.querySelector('.i-11').onkeydown = t11;
+document.querySelector('.i-11').onkeyup = t12;
 
