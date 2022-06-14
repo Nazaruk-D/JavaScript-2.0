@@ -69,51 +69,107 @@ document.querySelector('.i-5').onkeydown = t5;
 // Task 6 ============================================
 /*  Дан input .i-6. Напишите функцию t6, которая выводит в .i-6 только символы в нижнем регистре.  */
 
-function t6() {
-
+function t6(event) {
+    return (event.keyCode > 0 && event.keyCode < 65 || event.keyCode > 90 );
 }
 
-// ваше событие здесь!!!
+document.querySelector('.i-6').onkeypress = t6;
 
 
 // Task 7 ============================================
 /*  Дан input .i-7. Напишите функцию t7, которая выводит в .out-7 случаный символ из массива a7 при каждом вводе символа. */
 
-function t7() {
-    const a7 = [];
-
+function random(min, max) { return Math.floor(Math.random() * (max - min + 1) + min); }
+const a7 = [];
+function t7(event) {
+    a7.push(event.key);
+    let rand = a7[random(0, a7.length - 1)];
+    document.querySelector('.out-7').innerHTML = rand;
 }
-
-// ваше событие здесь!!!
+document.querySelector('.i-7').onkeypress = t7;
 
 // Task 8 ============================================
 /*  Дан input .i-8. Напишите функцию t8, которая выводит в .out-8 вводимый в input текст, но заменяет i на 1, o на 0, l на 7. */
 
-function t8() {
+function t8(event) {
+    let out = document.querySelector('.out-8');
+    // const a = {
+    //     i: 1,
+    //     o: 0,
+    //     l: 7
+    // }
+    // if (event.key == a[key]) {
+    //     out.innerHTML += a[event.key];
+    // }
+    // else {
+    //     out.innerHTML += event.key;
+    // }
 
+    switch (event.key) {
+        case "i": out.innerHTML += 1;
+        break;
+        case "o": out.innerHTML += 0;
+        break;
+        case "l": out.innerHTML += 7;
+        break;
+        default: out.innerHTML += event.key;
+    }
+        
 }
 
-// ваше событие здесь!!!
+document.querySelector('.i-8').onkeypress = t8;
 
 
 // Task 9 ============================================
 /* Дан input .i-9. Напишите функцию t8, выводит в .out-9 количество нажатых клавиш стрелка вниз. */
 
-function t9() {
-
+let sum = 0;
+function t9(event) {
+    let out = document.querySelector('.out-9');
+    if (event.keyCode == 40) {
+        sum = sum + 1;
+        out.innerHTML = sum;
+    }
 }
 
-// ваше событие здесь!!!
+document.querySelector('.i-9').onkeydown = t9;
 
 
 // Task 10 ============================================
-/*  Дан input .i-10 и изображение 1.png. Добавьте событие на input, при нажатии клавиш стрелка вправо и стрелка влево увеличивать ширину изображения. Клавиши стрелка вверх и вниз - увеличивать высоту изображения. Одно нажатие клавиши - 1px. */
+/*  Дан input .i-10 и изображение 1.png. Добавьте событие на input, при нажатии клавиш стрелка вправо и стрелка влево 
+увеличивать ширину изображения. Клавиши стрелка вверх и вниз - увеличивать высоту изображения. Одно нажатие клавиши - 1px. */
 
-function t10() {
-
+let h = 75;
+let w = 75;
+function t10(event) {
+    let img = document.querySelector('.div-10 > img');
+    if (event.keyCode == 40 || event.keyCode == 38) {
+        img.style.height = h + 'px';
+        h++;
+    }
+    else if (event.keyCode == 37 || event.keyCode == 39) {
+        img.style.width = w + 'px';
+        w++;
+    }
 }
 
-// ваше событие здесь!!!
+// function f18() {
+//     let x = document.querySelector('.div-18');
+//     x.style.width = 175 + 'px';
+//     x.innerHTML = x.style.width;
+//     console.log(x.style.width);
+// }
+// document.querySelector('.div-18').onmouseenter = f18; 
+
+        //         <input type="text" class="i-10">
+        //         <div class="div-10 block">
+        //             <img src="img/1.png" alt="">
+        //         </div>
+        //         <div class="out-10">
+        //         </div>
+        // </section>
+
+document.querySelector('.i-10').onkeydown = t10;
 
 // Task 11 ============================================
 /*  Проект. 
