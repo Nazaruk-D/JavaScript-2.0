@@ -79,58 +79,65 @@ document.querySelector('.b-5').addEventListener('touchstart', t5);
 /*  Добавьте событие ontouchend на div-4. При его срабатывании выведите в out-6 слово touchend. */
 
 function t6() {
-
+    document.querySelector('.out-6').innerHTML += 'touchend ';
 }
 
-// ваше событие здесь!!!
+document.querySelector('.div-4').addEventListener('touchend', t6);
 
 
 // Task 7 ============================================
 /*  Дан блок div-7. Добавьте событие touch, при срабатывании которого окрашивайте блок в красный цвет. */
 
 function t7() {
-
+    document.querySelector('.div-7').style.background = 'red';
 }
 
-// ваше событие здесь!!!
+document.querySelector('.div-7').addEventListener('touchstart', t7);
 
 // Task 8 ============================================
-/*  Дан блок div-8. Добавьте на него событие touch, которое при срабатывании окрашивает блок случаным цветом из массива a8=[red, green, blue, orange, pink, yellow] */
+/*  Дан блок div-8. Добавьте на него событие touch, которое при срабатывании окрашивает 
+блок случаным цветом из массива a8=[red, green, blue, orange, pink, yellow] */
+
+function random(min, max) { return Math.floor(Math.random() * (max - min + 1) + min); }
 
 function t8() {
-
+    let a8 = ['red', 'green', 'blue', 'orange', 'pink', 'yellow'];
+    let rand = a8[random(0, a8.length - 1)];
+    document.querySelector('.div-8').style.background = rand;
 }
 
-// ваше событие здесь!!!
+document.querySelector('.div-8').addEventListener('touchstart', t8);
 
 
 // Task 9 ============================================
 /* Дан блок div-9. Добавьте событие ontouch. Выводите количество одновременных касаний в out-9. */
 
-function t9() {
-
+function t9(event) {
+    document.querySelector('.out-9').innerHTML = event.targetTouches.length;
 }
 
-// ваше событие здесь!!!
+document.querySelector('.div-9').addEventListener('touchstart', t9);
 
 
 // Task 10 ============================================
 /*  Дан блок div-10. Добавьте на него событие touchmove. При срабатывании события - увеличивайте его ширину на 1. */
 
+let p = 70;
 function t10() {
-
+    document.querySelector('.div-10').style.width = p + 'px';
+    p++;
 }
-
-// ваше событие здесь!!!
+document.querySelector('.div-10').addEventListener('touchmove', t10);
 
 // Task 11 ============================================
 /*  Дан блок div-11. Добавьте на него событие touch. При срабатывании выводите радиус события radiusX, radiusY. */
 
-function t11() {
-
+function t11(event) {
+    console.log(event);
+    document.querySelector('.out-11').innerHTML = `radiusY:${event.radiusY} radiusX: ${event.radiusX}`;
 }
 
-// ваше событие здесь!!!
+document.querySelector('.div-11').addEventListener('touchstart', t11);
 
 // Task 12 ============================================
 /*  Мини проект. Ознакомьтесь с версткой в задании 12.
